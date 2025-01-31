@@ -6,6 +6,6 @@
 ![Capa-aws](https://github.com/user-attachments/assets/1d28e6cc-b046-4665-8e5f-9f741866b4dc)
 
 
-## Veja o projeto completo ➡️ 
+Veja o projeto completo:➡️  [Pipeline de Dados com AWS](https://github.com/lucassdeandrade/Pipeline-de-Dados-com-AWS/blob/main/ProjetoCloud.ipynb)
 
 

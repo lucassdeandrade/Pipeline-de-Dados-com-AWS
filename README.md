@@ -6,7 +6,7 @@
 
 ![capa projeto - aws](https://github.com/user-attachments/assets/e6c9391d-0eb3-48e9-af76-8fb5abbf5e9b)
 
-## Veja o projeto completo ➡️ https://github.com/lucassdeandrade/Pipeline-de-Dados-com-AWS/blob/main/Pipeline-AWS.ipynb
+## Veja o projeto completo ➡️[ https://github.com/lucassdeandrade/Pipeline-de-Dados-com-AWS/blob/main/Pipeline-AWS.ipynb](https://github.com/lucassdeandrade/Pipeline-de-Dados-com-AWS/blob/main/Pipeline-AWS.ipynb)
 
 
 

@@ -51,3 +51,37 @@ Camada de **Aplicação/Apresentação**: Essa é a camada onde os dados process
 - Curated.zo
 
 **Desmarque o bloqueio ao acesso público. Por padrão, a AWS vai perguntar se você realmente quer fazer isso por questões de segurança. Mas, como esse bucket será usado somente para esse projeto e não para um ambiente de produção, não tem problema confiar e marcar a opção**.
+
+![1-Create S3 bucket](https://github.com/user-attachments/assets/cf2c987a-d1e8-4957-82bc-1fc5deab380e)
+
+### 2° Faço o upload dos arquivos que eu já extrair da nossa fonte de dados diretamente para o bucket **Landing.zo**
+
+![2-upload file](https://github.com/user-attachments/assets/ebe14d4f-a7ea-4e52-b776-21b442110b65)
+
+### 3° Crio um cluster no Amazon EMR
+- **Name**: Coloco o nome do meu cluster 'pt-data-cluster'.
+- **Amazon EMR release**:  Escolho a versão EMR 7.6 e deixo os pacotes de aplicação como default.
+- **Cluster configuration**: Deixo selecionado o campo **Uniform instance** opção que oferece facilidade, estabilidade enquanto a **Flexible Instance Fleets** Permite otimizar custos e desempenho.
+- **Primary**: Escolho a instância EC2 que irá atuar como nó mestre, responsável por gerenciar o cluster.
+- **Core Instance**: Define os nós principais que processarão os dados. Esses nós armazenam e executam os workloads do cluster.
+- **Cluster Scaling and Provisioning**: Seleciono **Set cluster size manually** que me permite definir o tamanho do cluster de forma manual, assim evitando escalonamento automático e custos inesperados.
+- **Provisioning Configuration**: Defino 3 instâncias para o meu uso. Assim, aumentando minha escalabilidade, tolerância a falhas e desempenho.
+- **Virtual Private Cloud**: Define a rede onde o cluster roda, controlando segurança, acesso e conectividade com outros serviços da AWS. Normalmente, já vem uma VPC padrão quando se cria uma conta na AWS, mas você pode criar uma que mais se encaixar no seu uso.
+- **Security Configuration and EC2 Key Pair**: Serve para acessar as instâncias do cluster via SSH. 
+- **Identity and Access Management (IAM)**: Seleciono **Create a service role** e depois, em **Security group**, coloco a vpc que eu já selecionei acima em **Networking**. E permito o acesso a todos os meus buckets.
+- **EC2 instance profile for Amazon EMR**: Escolho a opção **Create an instance profile** O EMR criará automaticamente uma IAM Role nova com permissões padrão, facilitando para quem não quer configurar a Role manualmente.
+
+### Lembrando que há diversas outras possibilidades de configurações no cluster, mas aqui coloquei somente as que eu fiz algum tipo de alteração.
+
+- ### Após esses processo, nosso cluster está pronto para ser criado.
+
+![3-Create cluster](https://github.com/user-attachments/assets/cda75f3d-66ca-48a3-b5bf-6b1ebbbe3b7b)
+
+
+
+
+
+
+
+
+
